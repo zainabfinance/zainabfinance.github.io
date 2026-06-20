@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zainab Kousar Shaikh | Finance & Accounts Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink:      #0a0a0a;
+    --white:    #ffffff;
+    --bg:       #fafaf8;
+    --yellow:   #ffe234;
+    --coral:    #ff5c3a;
+    --sky:      #3a8fff;
+    --mint:     #1de9b6;
+    --lavender: #c084fc;
+    --border:   #0a0a0a;
+    --card-r:   12px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--yellow); }
+  ::-webkit-scrollbar-thumb { background: var(--ink); border-radius: 3px; }
+
+  /* ─── NAV ──────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 62px;
+    background: var(--ink);
+    border-bottom: 3px solid var(--yellow);
+  }
+  .nav-logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.15rem; font-weight: 800;
+    color: var(--white); letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--yellow); }
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none; font-size: 0.82rem;
+    font-weight: 500; letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+  .nav-cta {
+    background: var(--yellow); color: var(--ink);
+    border: none; padding: 8px 20px;
+    border-radius: 5px; font-size: 0.82rem;
+    font-weight: 700; cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 3px 3px 0 rgba(255,255,255,0.3); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); }
+  .mobile-menu {
+    display: none; flex-direction: column;
+    position: fixed; top: 62px; left: 0; right: 0;
+    background: var(--ink); border-bottom: 2px solid var(--yellow);
+    padding: 1.2rem 5vw; gap: 0.8rem; z-index: 99;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--white); text-decoration: none; font-size: 0.95rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+  /* ─── HERO ──────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    background: var(--yellow);
+    border-bottom: 3px solid var(--ink);
+    display: flex; align-items: center;
+    padding: 100px 5vw 60px;
+    position: relative; overflow: hidden;
+  }
+  /* Big decorative shapes */
+  .hero-shape1 {
+    position: absolute; right: -60px; top: 40px;
+    width: 420px; height: 420px;
+    background: var(--coral);
+    border-radius: 50%;
+    border: 3px solid var(--ink);
+    z-index: 0;
+  }
+  .hero-shape2 {
+    position: absolute; right: 200px; bottom: -80px;
+    width: 260px; height: 260px;
+    background: var(--sky);
+    border-radius: 50%;
+    border: 3px solid var(--ink);
+    z-index: 0;
+  }
+  .hero-shape3 {
+    position: absolute; left: 60%; top: 55%;
+    width: 120px; height: 120px;
+    background: var(--mint);
+    border: 3px solid var(--ink);
+    transform: rotate(20deg);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 680px; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink); color: var(--white);
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 30px;
+    margin-bottom: 1.4rem;
+  }
+  .hero-tag span { color: var(--yellow); }
+  h1.hero-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 0.97;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  h1.hero-name .underline {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 6px;
+  }
+  .hero-sub {
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--ink); opacity: 0.7;
+    max-width: 500px; margin-bottom: 2.4rem;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-ink {
+    background: var(--ink); color: var(--white);
+    padding: 13px 28px; border-radius: 6px;
+    font-weight: 700; font-size: 0.9rem;
+    text-decoration: none; border: 2px solid var(--ink);
+    transition: background 0.15s, color 0.15s, transform 0.15s;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+  }
+  .btn-ink:hover { background: var(--coral); border-color: var(--coral); transform: translate(-2px,-2px); box-shadow: 6px 6px 0 rgba(0,0,0,0.2); }
+  .btn-ghost {
+    background: transparent; color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 13px 28px; border-radius: 6px;
+    font-weight: 700; font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--white); transform: translate(-2px,-2px); }
+
+  .hero-pills {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 2rem;
+  }
+  .hero-pill {
+    background: var(--white); color: var(--ink);
+    border: 2px solid var(--ink); border-radius: 30px;
+    font-size: 0.78rem; font-weight: 700;
+    padding: 5px 14px;
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+
+  /* stat strip */
+  .stat-strip {
+    background: var(--ink);
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    display: flex; overflow: hidden;
+  }
+  .stat-block {
+    flex: 1; padding: 2rem 2.5rem;
+    border-right: 2px solid rgba(255,255,255,0.1);
+    text-align: center;
+  }
+  .stat-block:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2.6rem; font-weight: 800;
+    line-height: 1; margin-bottom: 0.3rem;
+  }
+  .stat-lbl { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+  .c-yellow { color: var(--yellow); }
+  .c-coral  { color: var(--coral);  }
+  .c-sky    { color: var(--sky);    }
+  .c-mint   { color: var(--mint);   }
+  .c-lav    { color: var(--lavender); }
+
+  /* ─── SECTIONS ──────────────────────────── */
+  section { padding: 88px 5vw; }
+  .sec-label {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--white); background: var(--ink);
+    padding: 4px 12px; border-radius: 3px;
+    margin-bottom: 0.8rem;
+  }
+  .sec-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; color: var(--ink);
+    letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+  .sec-rule {
+    width: 56px; height: 4px;
+    border-radius: 2px; margin: 1rem 0 2.8rem;
+  }
+
+  /* ─── ABOUT ─────────────────────────────── */
+  #about { background: var(--white); border-bottom: 3px solid var(--ink); }
+  .about-grid { display: grid; grid-template-columns: 320px 1fr; gap: 4rem; align-items: start; }
+  .about-card {
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    padding: 2rem;
+    box-shadow: 6px 6px 0 var(--ink);
+    position: sticky; top: 80px;
+  }
+  .about-avatar {
+    width: 72px; height: 72px;
+    background: var(--ink);
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.5rem; font-weight: 800; color: var(--yellow);
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+  }
+  .about-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.1rem; font-weight: 800; color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+  .about-role { font-size: 0.8rem; font-weight: 600; color: var(--ink); opacity: 0.6; margin-bottom: 1.5rem; }
+  .about-meta-item {
+    display: flex; align-items: flex-start; gap: 9px;
+    font-size: 0.82rem; font-weight: 500; color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+  .about-meta-item .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--ink); flex-shrink: 0; margin-top: 5px;
+  }
+
+  .about-body p { color: #444; font-size: 0.94rem; line-height: 1.85; margin-bottom: 1rem; }
+  .about-body p strong { color: var(--ink); }
+  .about-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.4rem; }
+  .achip {
+    font-size: 0.8rem; font-weight: 700;
+    padding: 6px 14px; border-radius: 5px;
+    border: 2px solid var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .achip.y { background: var(--yellow); color: var(--ink); }
+  .achip.c { background: var(--coral); color: var(--white); }
+  .achip.s { background: var(--sky); color: var(--white); }
+  .achip.m { background: var(--mint); color: var(--ink); }
+  .achip.l { background: var(--lavender); color: var(--ink); }
+
+  /* ─── SKILLS ─────────────────────────────── */
+  #skills { background: var(--bg); border-bottom: 3px solid var(--ink); }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .skill-box {
+    background: var(--white);
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    padding: 1.8rem;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .skill-box-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.78rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 1.4rem; padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--ink);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sbt-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--ink); }
+  .skill-bar-item { margin-bottom: 1.2rem; }
+  .skill-bar-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .skill-bar-head span:first-child { font-size: 0.86rem; font-weight: 600; color: var(--ink); }
+  .skill-bar-head span:last-child { font-size: 0.78rem; font-weight: 700; }
+  .strack {
+    background: #f0f0ee; border: 2px solid var(--ink);
+    border-radius: 4px; height: 10px; overflow: hidden;
+  }
+  .sfill {
+    height: 100%; width: 0;
+    border-radius: 2px;
+    transition: width 1.3s cubic-bezier(0.22,1,0.36,1);
+  }
+  .fill-coral   { background: var(--coral); }
+  .fill-sky     { background: var(--sky); }
+  .fill-yellow  { background: var(--yellow); }
+  .fill-mint    { background: var(--mint); }
+  .fill-lav     { background: var(--lavender); }
+
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 0.4rem; }
+  .stag {
+    font-size: 0.78rem; font-weight: 700;
+    padding: 5px 12px; border-radius: 5px;
+    border: 2px solid var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    cursor: default;
+    transition: transform 0.1s;
+  }
+  .stag:hover { transform: translate(-1px, -1px); }
+  .stag.y { background: var(--yellow); color: var(--ink); }
+  .stag.c { background: var(--coral); color: var(--white); }
+  .stag.s { background: var(--sky); color: var(--white); }
+  .stag.m { background: var(--mint); color: var(--ink); }
+  .stag.l { background: var(--lavender); color: var(--ink); }
+  .stag.w { background: var(--white); color: var(--ink); }
+
+  /* ─── EXPERIENCE ─────────────────────────── */
+  #experience { background: var(--white); border-bottom: 3px solid var(--ink); }
+  .exp-cards { display: flex; flex-direction: column; gap: 1.4rem; }
+  .exp-card {
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    overflow: hidden;
+    box-shadow: 5px 5px 0 var(--ink);
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.15s;
+  }
+  .exp-card.visible { opacity: 1; transform: translateY(0); }
+  .exp-card:hover { box-shadow: 8px 8px 0 var(--ink); transform: translate(-2px,-2px); }
+  .exp-card-header {
+    padding: 1.2rem 1.6rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .exp-card-header.coral  { background: var(--coral); }
+  .exp-card-header.sky    { background: var(--sky); }
+  .exp-card-header.mint   { background: var(--mint); }
+  .exp-card-body { padding: 1.5rem 1.6rem; background: var(--white); }
+  .exp-role-txt {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.1rem; font-weight: 800; color: var(--white);
+  }
+  .exp-role-txt.dark { color: var(--ink); }
+  .exp-co-txt { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.75); margin-top: 2px; }
+  .exp-co-txt.dark { color: rgba(0,0,0,0.55); }
+  .exp-period-badge {
+    background: var(--ink); color: var(--white);
+    font-size: 0.73rem; font-weight: 700;
+    padding: 4px 12px; border-radius: 20px; white-space: nowrap;
+  }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .exp-bullets li {
+    display: flex; gap: 10px;
+    font-size: 0.87rem; color: #444; align-items: flex-start;
+  }
+  .exp-bullets li::before { content: '→'; font-weight: 700; flex-shrink: 0; margin-top: 1px; font-size: 0.8rem; }
+  .eb-coral  .exp-bullets li::before { color: var(--coral); }
+  .eb-sky    .exp-bullets li::before { color: var(--sky); }
+  .eb-mint   .exp-bullets li::before { color: #0aa880; }
+
+  /* ─── PROJECTS ───────────────────────────── */
+  #projects { background: var(--bg); border-bottom: 3px solid var(--ink); }
+  .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1.4rem; }
+  .proj-card {
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    overflow: hidden;
+    box-shadow: 5px 5px 0 var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s;
+    background: var(--white);
+  }
+  .proj-card:hover { transform: translate(-3px,-3px); box-shadow: 8px 8px 0 var(--ink); }
+  .proj-header {
+    padding: 1.2rem 1.4rem;
+    border-bottom: 2px solid var(--ink);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .proj-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2rem; font-weight: 800; line-height: 1;
+    color: rgba(0,0,0,0.12);
+  }
+  .proj-icon { font-size: 1.5rem; }
+  .proj-body { padding: 1.3rem 1.4rem; }
+  .proj-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; }
+  .proj-desc { font-size: 0.83rem; color: #555; line-height: 1.75; margin-bottom: 1rem; }
+  .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 1rem; }
+  .ptag { font-size: 0.7rem; font-weight: 700; padding: 3px 9px; border-radius: 4px; border: 1.5px solid var(--ink); }
+  .ptag.y { background: var(--yellow); color: var(--ink); }
+  .ptag.c { background: var(--coral); color: var(--white); }
+  .ptag.s { background: var(--sky); color: var(--white); }
+  .ptag.m { background: var(--mint); color: var(--ink); }
+  .proj-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; font-weight: 800; color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s, gap 0.15s;
+  }
+  .proj-link:hover { color: var(--coral); border-color: var(--coral); gap: 9px; }
+
+  /* ─── EDUCATION ──────────────────────────── */
+  #education { background: var(--sky); border-bottom: 3px solid var(--ink); }
+  #education .sec-title { color: var(--white); }
+  #education .sec-label { background: var(--white); color: var(--ink); }
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 1.2rem; }
+  .edu-card {
+    background: var(--white);
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    padding: 1.5rem;
+    box-shadow: 5px 5px 0 var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .edu-card:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+  .edu-yr {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2.2rem; font-weight: 800; color: var(--sky);
+    line-height: 1; margin-bottom: 0.8rem;
+  }
+  .edu-deg { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; font-weight: 800; color: var(--ink); margin-bottom: 0.3rem; }
+  .edu-inst { font-size: 0.78rem; color: #666; margin-bottom: 0.8rem; line-height: 1.5; }
+  .edu-pill {
+    display: inline-block;
+    background: var(--yellow); color: var(--ink);
+    font-size: 0.75rem; font-weight: 800;
+    padding: 4px 12px; border-radius: 20px;
+    border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+  }
+
+  /* ─── CERTIFICATIONS ─────────────────────── */
+  #certifications { background: var(--coral); border-bottom: 3px solid var(--ink); }
+  #certifications .sec-title { color: var(--white); }
+  #certifications .sec-label { background: var(--white); color: var(--ink); }
+  .cert-flex { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .cert-card {
+    flex: 1; min-width: 260px;
+    background: var(--white);
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    padding: 1.6rem;
+    box-shadow: 5px 5px 0 var(--ink);
+    display: flex; gap: 1rem; align-items: flex-start;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .cert-card:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--ink); }
+  .cert-icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    background: var(--yellow); border: 2px solid var(--ink);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .cert-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.95rem; font-weight: 800; color: var(--ink); margin-bottom: 0.3rem; }
+  .cert-body { font-size: 0.8rem; color: #555; }
+
+  /* ─── CONTACT ────────────────────────────── */
+  #contact { background: var(--mint); border-bottom: 3px solid var(--ink); }
+  #contact .sec-title { color: var(--ink); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .contact-blurb h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem;
+  }
+  .contact-blurb p { font-size: 0.9rem; color: var(--ink); opacity: 0.7; margin-bottom: 2rem; line-height: 1.8; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.9rem; }
+  .clink {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--white);
+    border: 3px solid var(--ink); border-radius: 10px;
+    padding: 12px 16px; text-decoration: none;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .clink:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); }
+  .clink-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    background: var(--yellow); border: 2px solid var(--ink);
+    border-radius: 7px; display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .clink strong { display: block; font-size: 0.85rem; font-weight: 700; color: var(--ink); }
+  .clink span { font-size: 0.78rem; color: #666; }
+  .contact-cta-box {
+    background: var(--ink);
+    border: 3px solid var(--ink);
+    border-radius: var(--card-r);
+    padding: 2.4rem;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  .contact-cta-box h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 0.6rem;
+  }
+  .contact-cta-box p { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-bottom: 1.8rem; line-height: 1.8; }
+  .cta-btns { display: flex; flex-direction: column; gap: 10px; }
+  .btn-yellow {
+    background: var(--yellow); color: var(--ink);
+    border: 2px solid var(--yellow);
+    padding: 12px 24px; border-radius: 6px;
+    font-weight: 800; font-size: 0.9rem; text-decoration: none;
+    box-shadow: 3px 3px 0 rgba(255,255,255,0.2);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn-yellow:hover { transform: translateY(-2px); box-shadow: 3px 5px 0 rgba(255,255,255,0.2); }
+  .btn-white-ghost {
+    background: transparent; color: rgba(255,255,255,0.7);
+    border: 2px solid rgba(255,255,255,0.25);
+    padding: 12px 24px; border-radius: 6px;
+    font-weight: 600; font-size: 0.9rem; text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-white-ghost:hover { border-color: var(--white); color: var(--white); }
+
+  /* ─── FOOTER ─────────────────────────────── */
+  footer {
+    background: var(--ink);
+    border-top: 3px solid var(--yellow);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 1rem; padding: 1.4rem 5vw;
+  }
+  .footer-logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1rem; font-weight: 800;
+    color: var(--white);
+  }
+  .footer-logo span { color: var(--yellow); }
+  .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+  .footer-dots { display: flex; gap: 6px; }
+  .fdot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.3); }
+  .fdot.y { background: var(--yellow); border-color: var(--yellow); }
+  .fdot.c { background: var(--coral); border-color: var(--coral); }
+  .fdot.s { background: var(--sky); border-color: var(--sky); }
+
+  /* ─── ANIMATIONS ─────────────────────────── */
+  .fade-up {
+    opacity: 0; transform: translateY(26px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up:nth-child(2) { transition-delay: 0.08s; }
+  .fade-up:nth-child(3) { transition-delay: 0.16s; }
+  .fade-up:nth-child(4) { transition-delay: 0.24s; }
+
+  /* ─── RESPONSIVE ─────────────────────────── */
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-card { position: static; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .stat-strip { flex-wrap: wrap; }
+    .stat-block { min-width: 50%; }
+    .hero-shape1 { width: 280px; height: 280px; }
+    .hero-shape2 { display: none; }
+  }
+  @media (max-width: 640px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 60px 5vw; }
+    h1.hero-name { font-size: 2.8rem; }
+    .hero-shape1 { display: none; }
+    .hero-shape3 { display: none; }
+    .edu-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">ZK<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:zainabmukim15@gmail.com">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-shape1"></div>
+  <div class="hero-shape2"></div>
+  <div class="hero-shape3"></div>
+  <div class="hero-content">
+    <div class="hero-tag">📍 Mumbai, India &nbsp;·&nbsp; <span>Open to Opportunities</span></div>
+    <h1 class="hero-name">
+      Zainab<br>
+      <span class="underline">Kousar</span><br>
+      Shaikh
+    </h1>
+    <p class="hero-sub">MBA Finance · Process Associate · SAP FICO · Oracle Fusion · Accounts Payable</p>
+    <div class="hero-ctas">
+      <a class="btn-ink" href="#contact">Get In Touch</a>
+      <a class="btn-ghost" href="#experience">View Experience</a>
+    </div>
+    <div class="hero-pills">
+      <span class="hero-pill">SAP FICO</span>
+      <span class="hero-pill">Oracle Fusion</span>
+      <span class="hero-pill">MS Excel</span>
+      <span class="hero-pill">CIA Certified</span>
+      <span class="hero-pill">MBA Finance 88%</span>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-block">
+    <div class="stat-num c-yellow">3+</div>
+    <div class="stat-lbl">Years Experience</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-num c-coral">88%</div>
+    <div class="stat-lbl">MBA Score</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-num c-sky">2</div>
+    <div class="stat-lbl">Certifications</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-num c-mint">3</div>
+    <div class="stat-lbl">Companies</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="fade-up">
+    <div class="sec-label">Who I Am</div>
+    <h2 class="sec-title">About Me</h2>
+    <div class="sec-rule" style="background:var(--coral);"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-card fade-up">
+      <div class="about-avatar">ZK</div>
+      <div class="about-name">Zainab Kousar Shaikh</div>
+      <div class="about-role">Process Associate · IBM India Pvt Ltd</div>
+      <div class="about-meta-item"><span class="dot"></span>Govandi, Mumbai 400043</div>
+      <div class="about-meta-item"><span class="dot"></span>zainabmukim15@gmail.com</div>
+      <div class="about-meta-item"><span class="dot"></span>+91 7738605125</div>
+      <div class="about-meta-item"><span class="dot"></span>MBA Finance · SSPU · 88%</div>
+      <div class="about-meta-item"><span class="dot"></span>CIA &amp; SAP Certified</div>
+    </div>
+    <div class="about-body fade-up">
+      <p>I'm a <strong>Finance &amp; Accounts professional</strong> with 3+ years of experience across IBM India, Hinduja Global Solutions, and a CA firm. My specialisation is in <strong>Accounts Payable, SAP FICO, Oracle Fusion, and financial reconciliation</strong>.</p>
+      <p>At IBM India Pvt Ltd, I work on 2-way and 3-way invoice matching in SAP, resolve discrepancies, and keep month-end closing audit-ready. At HGS prior, I managed Oracle Fusion AP end-to-end — payment reversals, TDS recovery, and credit-note processing.</p>
+      <p>I bring an <strong>MBA in Finance (88%)</strong> from Symbiosis Skills and Professional University, backed by CIA and SAP certifications — and a genuine love for clean, accurate numbers.</p>
+      <div class="about-chips">
+        <span class="achip y">3-Way PO Matching</span>
+        <span class="achip c">Oracle Fusion AP</span>
+        <span class="achip s">TDS &amp; GST Compliance</span>
+        <span class="achip m">MS Excel MIS</span>
+        <span class="achip l">Vendor Management</span>
+        <span class="achip y">Audit Documentation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="fade-up">
+    <div class="sec-label">Expertise</div>
+    <h2 class="sec-title">Skills</h2>
+    <div class="sec-rule" style="background:var(--sky);"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-box fade-up">
+      <div class="skill-box-title">
+        <div class="sbt-dot" style="background:var(--coral);"></div>
+        Technical Tools
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>SAP FICO</span><span class="c-coral">90%</span></div>
+        <div class="strack"><div class="sfill fill-coral" data-width="90"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>Oracle Fusion</span><span class="c-sky">85%</span></div>
+        <div class="strack"><div class="sfill fill-sky" data-width="85"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>MS Excel (VLOOKUP, Pivot)</span><span style="color:var(--ink)">88%</span></div>
+        <div class="strack"><div class="sfill fill-yellow" data-width="88"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>Tally Prime</span><span class="c-mint">80%</span></div>
+        <div class="strack"><div class="sfill fill-mint" data-width="80"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>ERP Systems</span><span class="c-lav">85%</span></div>
+        <div class="strack"><div class="sfill fill-lav" data-width="85"></div></div>
+      </div>
+    </div>
+    <div class="skill-box fade-up">
+      <div class="skill-box-title">
+        <div class="sbt-dot" style="background:var(--sky);"></div>
+        Domain Knowledge
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>Accounts Payable</span><span class="c-coral">92%</span></div>
+        <div class="strack"><div class="sfill fill-coral" data-width="92"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>Financial Reconciliation</span><span class="c-sky">88%</span></div>
+        <div class="strack"><div class="sfill fill-sky" data-width="88"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>Tax Compliance (TDS/GST)</span><span class="c-mint">82%</span></div>
+        <div class="strack"><div class="sfill fill-mint" data-width="82"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-head"><span>Bookkeeping &amp; Ledger</span><span class="c-lav">86%</span></div>
+        <div class="strack"><div class="sfill fill-lav" data-width="86"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="fade-up" style="margin-top:2rem;">
+    <div class="skill-box" style="box-shadow:5px 5px 0 var(--ink);">
+      <div class="skill-box-title">
+        <div class="sbt-dot" style="background:var(--yellow);"></div>
+        Financial &amp; Soft Skills
+      </div>
+      <div class="tag-cloud">
+        <span class="stag y">Vendor Management</span>
+        <span class="stag c">Invoice Processing</span>
+        <span class="stag s">Month-End Closing</span>
+        <span class="stag m">Credit Note Processing</span>
+        <span class="stag l">ITR Computation</span>
+        <span class="stag y">Payment Reversals</span>
+        <span class="stag w">Amortization</span>
+        <span class="stag c">Accuracy &amp; Detail</span>
+        <span class="stag s">Time Management</span>
+        <span class="stag m">Problem Solving</span>
+        <span class="stag l">Communication</span>
+        <span class="stag y">Team Collaboration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="fade-up">
+    <div class="sec-label">Career Journey</div>
+    <h2 class="sec-title">Work Experience</h2>
+    <div class="sec-rule" style="background:var(--mint);"></div>
+  </div>
+  <div class="exp-cards">
+    <div class="exp-card eb-coral">
+      <div class="exp-card-header coral">
+        <div>
+          <div class="exp-role-txt">Process Associate — Accounts Payable</div>
+          <div class="exp-co-txt">IBM India Pvt Ltd</div>
+        </div>
+        <div class="exp-period-badge">Feb 2026 – Present</div>
+      </div>
+      <div class="exp-card-body">
+        <ul class="exp-bullets">
+          <li>Performed 2-way and 3-way matching (Invoice, PO, GRN) in SAP to ensure payment accuracy</li>
+          <li>Identified and resolved invoice discrepancies for timely vendor payments</li>
+          <li>Maintained and analysed AP data using MS Excel — VLOOKUP, Pivot Tables</li>
+          <li>Coordinated with vendors and internal teams for efficient query resolution</li>
+          <li>Supported month-end closing and prepared audit documentation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-card eb-sky">
+      <div class="exp-card-header sky">
+        <div>
+          <div class="exp-role-txt">F&amp;A Associate — Accounts Payable</div>
+          <div class="exp-co-txt">Hinduja Global Solutions (HGS)</div>
+        </div>
+        <div class="exp-period-badge">Jul 2024 – Jan 2026</div>
+      </div>
+      <div class="exp-card-body">
+        <ul class="exp-bullets">
+          <li>Processed vendor invoices, managed payment reversals, and posted transactions in Oracle Fusion</li>
+          <li>Performed invoice amortization, credit-note processing, and TDS recovery</li>
+          <li>Minimised reconciliation gaps through proactive discrepancy identification</li>
+          <li>Collaborated with procurement and payroll teams to resolve queries</li>
+          <li>Improved month-end closing efficiency through cross-functional coordination</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-card eb-mint">
+      <div class="exp-card-header mint">
+        <div>
+          <div class="exp-role-txt dark">CA Intern</div>
+          <div class="exp-co-txt dark">CA Firm</div>
+        </div>
+        <div class="exp-period-badge">Mar 2023 – Oct 2023</div>
+      </div>
+      <div class="exp-card-body">
+        <ul class="exp-bullets">
+          <li>Handled bookkeeping and maintained day-to-day accounting records</li>
+          <li>Assisted in GST and TDS compliance, including return filing and Excel-based working</li>
+          <li>Supported ITR computation and preparation of Balance Sheet &amp; P&amp;L statements</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="fade-up">
+    <div class="sec-label">Work Highlights</div>
+    <h2 class="sec-title">Key Projects</h2>
+    <div class="sec-rule" style="background:var(--lavender);"></div>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-card fade-up">
+      <div class="proj-header" style="background:var(--yellow);">
+        <div class="proj-num">01</div>
+        <div class="proj-icon">📊</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">AP MIS Dashboard</div>
+        <div class="proj-desc">Multi-sheet Excel MIS workbook — automated VLOOKUP dashboards, aging analysis, and pivot-based vendor summary reports for month-end review.</div>
+        <div class="proj-tags">
+          <span class="ptag y">Excel</span>
+          <span class="ptag m">Pivot Tables</span>
+          <span class="ptag c">MIS Reporting</span>
+        </div>
+        <a class="proj-link" href="https://github.com/zainabfinance/AP-MIS-Report" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="proj-card fade-up">
+      <div class="proj-header" style="background:var(--coral);">
+        <div class="proj-num" style="color:rgba(255,255,255,0.2);">02</div>
+        <div class="proj-icon">🧾</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Accounts Payable Dashboard</div>
+        <div class="proj-desc">Interactive Excel dashboard for vendor payment tracking — built with pivot tables, pivot charts, and dashboard navigation for AP visibility at a glance.</div>
+        <div class="proj-tags">
+          <span class="ptag c">Excel</span>
+          <span class="ptag y">Pivot Charts</span>
+          <span class="ptag s">Vendor Tracking</span>
+        </div>
+        <a class="proj-link" href="https://github.com/zainabfinance/Accounts-Payable-Dashboard" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="proj-card fade-up">
+      <div class="proj-header" style="background:var(--sky);">
+        <div class="proj-num" style="color:rgba(255,255,255,0.2);">03</div>
+        <div class="proj-icon">⚖️</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">GST &amp; TDS Compliance</div>
+        <div class="proj-desc">End-to-end GST return filing and TDS compliance at CA firm — Excel working papers, ITR computation, Balance Sheet &amp; P&amp;L preparation.</div>
+        <div class="proj-tags">
+          <span class="ptag s">GST</span>
+          <span class="ptag c">TDS Recovery</span>
+          <span class="ptag y">ITR</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card fade-up">
+      <div class="proj-header" style="background:var(--lavender);">
+        <div class="proj-num">04</div>
+        <div class="proj-icon">💰</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">Payroll Dashboard</div>
+        <div class="proj-desc">Interactive payroll analytics workbook — salary analysis, department-wise payroll reports, and interactive slicers for HR &amp; finance reviews.</div>
+        <div class="proj-tags">
+          <span class="ptag m">Excel</span>
+          <span class="ptag s">Slicers</span>
+          <span class="ptag y">Payroll Analysis</span>
+        </div>
+        <a class="proj-link" href="https://github.com/zainabfinance/Payroll-Dashboard" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </div>
+    <div class="proj-card fade-up">
+      <div class="proj-header" style="background:var(--ink);">
+        <div class="proj-num" style="color:rgba(255,255,255,0.15);">05</div>
+        <div class="proj-icon">🐙</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title" style="color:var(--ink);">Explore All Projects</div>
+        <div class="proj-desc">Browse my complete GitHub profile for the full Accounts Payable Dashboard, Payroll Dashboard, AP MIS Report files, and more finance-analytics work.</div>
+        <div class="proj-tags">
+          <span class="ptag y">GitHub</span>
+          <span class="ptag c">Finance Analytics</span>
+        </div>
+        <a class="proj-link" href="https://github.com/zainabfinance" target="_blank" rel="noopener">Visit GitHub Profile →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="fade-up">
+    <div class="sec-label">Academic Background</div>
+    <h2 class="sec-title">Education</h2>
+    <div class="sec-rule" style="background:var(--white);"></div>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card fade-up">
+      <div class="edu-yr">2025</div>
+      <div class="edu-deg">MBA — Finance</div>
+      <div class="edu-inst">Symbiosis Skills &amp; Professional University (SSPU)</div>
+      <span class="edu-pill">88%</span>
+    </div>
+    <div class="edu-card fade-up">
+      <div class="edu-yr">2022</div>
+      <div class="edu-deg">Bachelor of Arts (BA)</div>
+      <div class="edu-inst">Yashwantrao Chavan Maharashtra Open University (YCMOU)</div>
+      <span class="edu-pill">63%</span>
+    </div>
+    <div class="edu-card fade-up">
+      <div class="edu-yr">2018</div>
+      <div class="edu-deg">HSC — Maharashtra Board</div>
+      <div class="edu-inst">Maharashtra State Board of Secondary &amp; Higher Secondary Education</div>
+      <span class="edu-pill">62%</span>
+    </div>
+    <div class="edu-card fade-up">
+      <div class="edu-yr">2016</div>
+      <div class="edu-deg">SSC — Maharashtra Board</div>
+      <div class="edu-inst">Maharashtra State Board of Secondary &amp; Higher Secondary Education</div>
+      <span class="edu-pill">78%</span>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="fade-up">
+    <div class="sec-label">Credentials</div>
+    <h2 class="sec-title">Certifications</h2>
+    <div class="sec-rule" style="background:var(--white);"></div>
+  </div>
+  <div class="cert-flex">
+    <div class="cert-card fade-up">
+      <div class="cert-icon">🏅</div>
+      <div>
+        <div class="cert-name">Certified Industrial Accountant (CIA)</div>
+        <div class="cert-body">Industry-recognised accounting certification covering core financial and compliance principles</div>
+      </div>
+    </div>
+    <div class="cert-card fade-up">
+      <div class="cert-icon">⚙️</div>
+      <div>
+        <div class="cert-name">SAP Certification</div>
+        <div class="cert-body">Certified in SAP FICO — applied daily in AP processing, invoice matching, and ERP workflows at IBM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="fade-up">
+    <div class="sec-label">Let's Talk</div>
+    <h2 class="sec-title">Get In Touch</h2>
+    <div class="sec-rule" style="background:var(--ink);"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="fade-up">
+      <div class="contact-blurb">
+        <h3>Open to New Opportunities</h3>
+        <p>Looking for roles in MIS Executive, Accounts Executive, or Payroll — preferably in Navi Mumbai or Mumbai. Reach out anytime!</p>
+      </div>
+      <div class="contact-links">
+        <a class="clink" href="mailto:zainabmukim15@gmail.com">
+          <div class="clink-icon">✉️</div>
+          <div><strong>Email</strong><span>zainabmukim15@gmail.com</span></div>
+        </a>
+        <a class="clink" href="tel:+917738605125">
+          <div class="clink-icon">📞</div>
+          <div><strong>Phone</strong><span>+91 7738605125</span></div>
+        </a>
+        <a class="clink" href="https://linkedin.com/in/zainabfinance" target="_blank" rel="noopener">
+          <div class="clink-icon">💼</div>
+          <div><strong>LinkedIn</strong><span>linkedin.com/in/zainabfinance</span></div>
+        </a>
+        <a class="clink" href="https://github.com/zainabfinance" target="_blank" rel="noopener">
+          <div class="clink-icon">🐙</div>
+          <div><strong>GitHub</strong><span>github.com/zainabfinance</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="contact-cta-box">
+        <h4>Ready to Contribute</h4>
+        <p>I bring accuracy, ERP expertise, and a finance-first mindset to every team. Let's build something great together.</p>
+        <div class="cta-btns">
+          <a class="btn-yellow" href="mailto:zainabmukim15@gmail.com">Send Me an Email</a>
+          <a class="btn-white-ghost" href="https://linkedin.com/in/zainabfinance" target="_blank" rel="noopener">View LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ZK<span>.</span></div>
+  <div class="footer-copy">© 2026 Zainab Kousar Shaikh · Mumbai, India</div>
+  <div class="footer-dots">
+    <div class="fdot y"></div>
+    <div class="fdot c"></div>
+    <div class="fdot s"></div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up, .exp-card').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.exp-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.12) + 's';
+  });
+
+  const skillObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.sfill').forEach(b => { b.style.width = b.dataset.width + '%'; });
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('#skills').forEach(el => skillObs.observe(el));
+
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    document.querySelectorAll('section[id]').forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  });
+</script>
+</body>
+</html>
